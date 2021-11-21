@@ -11,7 +11,7 @@ Follow these steps to add this eslint config to your project.
 1. Install packages - `yarn add --dev @gretzky/eslint-config`
 2. Install peer dependencies - `npx install-peerdeps --dev @gretzky/eslint-config`
 
-If you run into any issues with peer dependencies, you can install them manually. 
+If you run into any issues with peer dependencies, you can install them manually.
 
 ```bash
 yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser babel-plugin-module-resolver eslint eslint-config-prettier eslint-import-resolver-babel-module eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-native-a11y prettier
@@ -24,8 +24,6 @@ Create an `.eslintrc.js` in the root of your project.
 This config can be used with TypeScript, with or without React or React Native. At minimum, this config assumes all projects are using es6 or higher and contain a `package.json` (for file resolution).
 
 ```js
-// .eslintrc.js
-
 // typescript
 module.exports = {
   extends: ["@gretzky/eslint-config"],
@@ -48,7 +46,7 @@ You can then configure the `lint` script in `package.json`
 
 ```json
 "scripts": {
-  "lint": "eslint ." // `.` means everything, you can change it to be a given folder, etc.
+  "lint": "eslint ."
 }
 ```
 
@@ -107,7 +105,7 @@ module.exports = {
 
 Be sure to enable it in your `tsconfig.json` as well:
 
-```json
+```js
 {
   // ...rest of your tsconfig.json
   "baseURL": ".", // root, could be any glob
@@ -139,13 +137,13 @@ plugins: [
 
 This config extends these configs and plugins:
 
-- [eslint - recommended](https://eslint.org/docs/rules/)
-- [@typescript-eslint - recommended](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
-- [react - recommended](https://github.com/yannickcr/eslint-plugin-react)
-- [react-hooks - recommended](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
-- [import - recommended](https://github.com/benmosher/eslint-plugin-import)
+- [eslint (recommended)](https://eslint.org/docs/rules/)
+- [@typescript-eslint (recommended)](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules)
+- [react (recommended)](https://github.com/yannickcr/eslint-plugin-react)
+- [react-hooks (recommended)](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+- [import (recommended)](https://github.com/benmosher/eslint-plugin-import)
 - [prettier](https://github.com/prettier/eslint-config-prettier)
-- [react native a11y (all rules)](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
+- [react native a11y (all)](https://github.com/FormidableLabs/eslint-plugin-react-native-a11y)
 
 There are a few individual rules configured for each, please check the `lib/` folder for more information.
 
