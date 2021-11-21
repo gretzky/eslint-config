@@ -1,6 +1,6 @@
 # @gretzky/eslint-config
 
-Basic eslint config for TypeScript with React (optional).
+ESLint config for TypeScript projects with extensions for React or React Native.
 
 ## Getting Started
 
